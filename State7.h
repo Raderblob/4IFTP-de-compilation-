@@ -4,18 +4,18 @@
 #include "State.h"
 using namespace std;
 
-class State6 : public State
+class State7 : public State
 {    
     public:
-        State6(Lexer * l) : State(l){}
-        ~State6();
+        State7(Lexer * l) : State(l){}
+        ~State7();
 
     protected:
         void val() {}
-        void plus();
-        void mult();
+        void plus(){}
+        void mult(){}
         void openPar(){}
-        void closePar();
+        void closePar() {}
         void accept() {}
         void nonTerm() {}
 };

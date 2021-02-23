@@ -2,6 +2,7 @@
 #include "lexer.h"
 #include "State3.h"
 #include "State2.h"
+#include "State8.h"
 
 void State5::val(){
      lexer->states.push(new State3(lexer));

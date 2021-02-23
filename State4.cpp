@@ -14,6 +14,6 @@ void State4::openPar() {
     
 }
 
-void:State4::nonTerm() {
+void State4::nonTerm() {
     lexer->states.push(new State7(lexer));
 }

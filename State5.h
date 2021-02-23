@@ -7,7 +7,7 @@ using namespace std;
 class State5 : public State
 {    
     public:
-        State5(Lexer * lexer);
+        State5(Lexer * l) : State(l){}
         ~State5();
 
     protected:
