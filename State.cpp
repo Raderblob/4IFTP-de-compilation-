@@ -1,6 +1,7 @@
 #include "State.h"
 #include "lexer.h"
 #include "symbole.h"
+#include <iostream>
 
 State::State(Lexer * l){
     lexer = l;
@@ -27,6 +28,9 @@ void State::faireUnTruc(Symbole * s) {
         break;
     case FIN:
         accept();
+        break;
+    default:
+        std::cout<<"err"<<std::endl;
         break;
 
     lexer->symbols.push(s);

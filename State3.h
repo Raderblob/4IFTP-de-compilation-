@@ -12,10 +12,10 @@ class State3 : public State
 
     protected:
         void val(){}
-        void plus(){}
-        void mult(){}
+        void plus();
+        void mult();
         void openPar(){}
-        void closePar(){}
-        void accept(){}
+        void closePar();
+        void accept();
         void nonTerm(){}
 };
