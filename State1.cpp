@@ -5,6 +5,7 @@
 #include "State3.h"
 #include "State4.h"
 #include "State5.h"
+#include "symbole.h"
 
 State* State1::plus(){
      std::cout<< "state1 pushing state 4"<< std::endl;
@@ -20,6 +21,11 @@ State* State1::mult(){
 
 State* State1::accept(){
      std::cout<< "state1 accepting"<< std::endl;
-     return nullptr;
+     lexer->states.pop();
+
+     cout << "Symbol length: " << lexer->symbols.size()<<endl;
+     cout << "State length: " << lexer->states.size() << endl;
+     cout << "result: " << lexer->symbols.top()->getValue()<<endl;
+     return this;
 
 }

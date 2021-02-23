@@ -35,7 +35,7 @@ State* State3::closePar(){
 }
 
 State* State3::accept(){
-     cout<< "state3 reducing"<< endl;
+    this->plus();
      return this;
 }
 

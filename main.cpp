@@ -8,7 +8,7 @@ int main(void) {
    Lexer l(chaine);
 
    Symbole * s;
-   while(*(s=l.Consulter())!=FIN) {
+   while(*(s=l.Consulter())!=FIN || l.states.size() >1) {
       s->Affiche();
       cout<<endl;
       l.Avancer();

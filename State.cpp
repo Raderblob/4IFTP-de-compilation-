@@ -34,8 +34,9 @@ State*  State::faireUnTruc(Symbole * s) {
             std::cout<<"err"<<std::endl;
             break;
     }
-    lexer->symbols.push(s);
-
+    if (res == nullptr) {
+        lexer->symbols.push(s);
+    }
 
     return res;
 }

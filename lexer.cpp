@@ -55,7 +55,7 @@ Symbole * Lexer::Consulter() {
 
 void Lexer::Avancer() {
    State* res = states.top()->faireUnTruc(tampon);
-   if (res) {
+   if (res != nullptr) {
        delete res;
    }
    else {
