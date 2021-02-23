@@ -30,7 +30,7 @@ State*  State::faireUnTruc(Symbole * s) {
             res = accept();
             break;
         default:
-            res = false;
+            res = nullptr;
             std::cout<<"err"<<std::endl;
             break;
     }

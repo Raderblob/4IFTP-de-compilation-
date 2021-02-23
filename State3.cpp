@@ -9,7 +9,6 @@ State* State3::plus() {
     cout<< "state3 reducing to ";
     lexer->symbols.top()->Affiche();
     cout << endl;
-    State* toDel = lexer->states.top();
     
 
     lexer->states.pop();
