@@ -8,15 +8,15 @@
 void State3::plus(){
     cout<< "state3 reducing"<< endl;
     
-    //State* toDel = lexer->states.top();
-    //delete toDel;
+    State* toDel = lexer->states.top();
+    //
 
     lexer->states.pop();
+    delete toDel;
 
     State* st = lexer->states.top();
-
+    cout<<st<<endl;
     st->nonTerm();
-
     lexer->symbols.top()->Affiche();
 }
 
