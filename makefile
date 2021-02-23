@@ -9,7 +9,7 @@ else
 	LDFLAGS=
 endif
 EXEC = main
-SRC= lexer.cpp symbole.cpp main.cpp
+SRC= lexer.cpp symbole.cpp main.cpp State.cpp
 OBJ= $(SRC:.cpp=.o)
 HEDR = $(SRC:.cpp=.h)
 
