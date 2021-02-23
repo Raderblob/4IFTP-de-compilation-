@@ -7,11 +7,11 @@ class State {
 
     public :
         State(Lexer * l);
-        ~State();
+        virtual ~State(){}
 
         void faireUnTruc(Symbole * s);
 
-
+        virtual void nonTerm(){}
     protected :
         Lexer * lexer;
 
@@ -21,7 +21,6 @@ class State {
         virtual void openPar() {}
         virtual void closePar() {}
         virtual void accept() {}
-        virtual void nonTerm() {}
         virtual void vide() {}
 
 };

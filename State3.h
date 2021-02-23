@@ -8,8 +8,10 @@ class State3 : public State
 {    
     public:
         State3(Lexer * l): State(l){}
-        ~State3();
+        virtual ~State3(){}
 
+
+        void nonTerm(){}
     protected:
         void val(){}
         void plus();
@@ -17,5 +19,5 @@ class State3 : public State
         void openPar(){}
         void closePar();
         void accept();
-        void nonTerm(){}
+        
 };
