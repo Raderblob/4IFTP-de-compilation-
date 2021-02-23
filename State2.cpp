@@ -4,16 +4,16 @@
 #include "State3.h"
 #include "State6.h"
 
-void State2::openPar(){
+State* State2::openPar(){
      cout<< "state2 pushing state 2"<< endl;
      lexer->states.push(new State2(lexer));
-    
+     return nullptr;
 }
 
-void State2::val(){
+State* State2::val(){
      cout<< "state2 pushing state 3"<< endl;
      lexer->states.push(new State3(lexer));
-    
+     return nullptr;
 }
 
 void State2::nonTerm(){

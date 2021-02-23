@@ -13,11 +13,11 @@ class State9 : public State
 
         void nonTerm() {}
     protected:
-        void val() {}
-        void plus(){}
-        void mult(){}
-        void openPar(){}
-        void closePar() {}
-        void accept() {}
+        State* val() { return nullptr; }
+        State* plus(){ return nullptr; }
+        State* mult(){ return nullptr; }
+        State* openPar(){ return nullptr; }
+        State* closePar() { return nullptr; }
+        State* accept() { return nullptr; }
         
 };

@@ -7,34 +7,35 @@ State::State(Lexer * l){
     lexer = l;
 }
 
-void State::faireUnTruc(Symbole * s) {
-
+State*  State::faireUnTruc(Symbole * s) {
+    State* res;
 
     switch ((int)(*s)) {
-    case OPENPAR:
-        openPar();
-        break;
-    case CLOSEPAR:
-        closePar();
-        break;
-    case MULT:
-        mult();
-        break;
-    case PLUS:
-        plus();
-        break;
-    case INT:
-        val();
-        break;
-    case FIN:
-        accept();
-        break;
-    default:
-        std::cout<<"err"<<std::endl;
-        break;
-
+        case OPENPAR:
+            res = openPar();
+            break;
+        case CLOSEPAR:
+            res = closePar();
+            break;
+        case MULT:
+            res = mult();
+            break;
+        case PLUS:
+            res = plus();
+            break;
+        case INT:
+            res = val();
+            break;
+        case FIN:
+            res = accept();
+            break;
+        default:
+            res = false;
+            std::cout<<"err"<<std::endl;
+            break;
+    }
     lexer->symbols.push(s);
-}
 
 
+    return res;
 }

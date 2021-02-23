@@ -9,18 +9,18 @@ class State {
         State(Lexer * l);
         virtual ~State(){}
 
-        void faireUnTruc(Symbole * s);
+        State* faireUnTruc(Symbole * s);
 
         virtual void nonTerm(){}
     protected :
         Lexer * lexer;
 
-        virtual void val() {}
-        virtual void plus() {}
-        virtual void mult() {}
-        virtual void openPar() {}
-        virtual void closePar() {}
-        virtual void accept() {}
-        virtual void vide() {}
+        virtual State* val() { return nullptr; }
+        virtual State* plus() { return nullptr; }
+        virtual State* mult() { return nullptr; }
+        virtual State* openPar() { return nullptr; }
+        virtual State* closePar() { return nullptr; }
+        virtual State* accept() { return nullptr; }
+        virtual State* vide() { return nullptr; }
 
 };

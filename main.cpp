@@ -12,7 +12,7 @@ int main(void) {
       s->Affiche();
       cout<<endl;
       l.Avancer();
-      cout<<"advanced "<< l.states.size() << endl;
+      cout<<"states: "<< l.states.size() << endl;
    }
    return 0;
 }

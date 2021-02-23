@@ -5,34 +5,37 @@
 
 #include "State2.h"
 
-void State3::plus(){
-    cout<< "state3 reducing"<< endl;
-    
+State* State3::plus() {
+    cout<< "state3 reducing to ";
+    lexer->symbols.top()->Affiche();
+    cout << endl;
     State* toDel = lexer->states.top();
-    //
+    
 
     lexer->states.pop();
-    delete toDel;
 
     State* st = lexer->states.top();
-    cout<<st<<endl;
+
     st->nonTerm();
-    lexer->symbols.top()->Affiche();
+
+
+   
+    return this;
 }
 
-void State3::mult(){
-     cout<< "state3 preducing"<< endl;
+State* State3::mult(){
+    this->plus();
      
-    
+     return this;
 }
 
-void State3::closePar(){
-     cout<< "state3 reducing"<< endl;
-    
+State* State3::closePar(){
+    this->plus();
+     return this;
 }
 
-void State3::accept(){
+State* State3::accept(){
      cout<< "state3 reducing"<< endl;
-    
+     return this;
 }
 
