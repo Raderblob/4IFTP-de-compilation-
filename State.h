@@ -1,15 +1,15 @@
 #pragma once
-#include "symbole.h"
+
 
 class Lexer;
-
+class Symbole;
 class State {
 
     public :
-        State(Lexer * l) : lexer(l) {}
-        virtual ~State();
+        State(Lexer * l);
+        ~State();
 
-        virtual void faireUnTruc(Symbole * s);
+        void faireUnTruc(Symbole * s);
 
 
     protected :

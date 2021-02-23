@@ -1,5 +1,10 @@
 #include "State.h"
 #include "lexer.h"
+#include "symbole.h"
+
+State::State(Lexer * l){
+    lexer = l;
+}
 
 void State::faireUnTruc(Symbole * s) {
 

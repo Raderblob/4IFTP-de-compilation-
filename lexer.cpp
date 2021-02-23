@@ -1,4 +1,12 @@
 #include "lexer.h"
+#include "symbole.h"
+#include "State0.h"
+Lexer::Lexer(string s){
+   flux = s;
+   tete = 0;
+   tampon = nullptr;
+   states.push(new State0(this));
+}
 
 Symbole * Lexer::Consulter() {
    if (!tampon) {

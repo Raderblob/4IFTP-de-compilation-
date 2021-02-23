@@ -2,14 +2,15 @@
 
 #include <string>
 #include <stack>
-#include "symbole.h"
-#include "State.h"
 using namespace std;
+
+class Symbole;
+class State; 
 
 class Lexer {
 
    public:
-      Lexer(string s) : flux(s), tete(0), tampon(nullptr) { }
+      Lexer(string s);
       ~Lexer() { }
 
       Symbole * Consulter();

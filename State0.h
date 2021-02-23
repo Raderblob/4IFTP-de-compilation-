@@ -7,15 +7,15 @@ using namespace std;
 class State0 : public State
 {    
     public:
-        State0(Lexer * lexer);
+        State0(Lexer * l): State(l){}
         ~State0();
 
     protected:
         void val();
-        void plus();
-        void mult();
+        void plus(){}
+        void mult(){}
         void openPar();
-        void closePar();
-        void accept();
+        void closePar(){}
+        void accept(){}
         void nonTerm();
 };

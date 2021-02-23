@@ -4,11 +4,11 @@
 #include "State.h"
 using namespace std;
 
-class State3 : public State
+class State6 : public State
 {    
     public:
-        State3(Lexer * l): State(l){}
-        ~State3();
+        State6(Lexer * l): State(l){}
+        ~State6();
 
     protected:
         void val(){}

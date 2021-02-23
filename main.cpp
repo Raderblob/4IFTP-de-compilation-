@@ -1,6 +1,6 @@
 #include <iostream>
 #include "lexer.h"
-
+#include "symbole.h"
 
 int main(void) {
    string chaine("(1+34)*123");
@@ -12,6 +12,7 @@ int main(void) {
       s->Affiche();
       cout<<endl;
       l.Avancer();
+      cout<<"advanced "<< l.states.size() << endl;
    }
    return 0;
 }

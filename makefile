@@ -1,6 +1,6 @@
 
 CC = g++
-DEBUG=yes
+DEBUG=no
 ifeq ($(DEBUG),yes)
 	CFLAGS=-Wall -Werror -ansi -pedantic -std=c++11 -g -D MAP
 	LDFLAGS=
@@ -9,7 +9,7 @@ else
 	LDFLAGS=
 endif
 EXEC = main
-SRC= lexer.cpp symbole.cpp main.cpp State.cpp
+SRC= lexer.cpp symbole.cpp main.cpp State.cpp State0.cpp State1.cpp State2.cpp State3.cpp
 OBJ= $(SRC:.cpp=.o)
 HEDR = $(SRC:.cpp=.h)
 
@@ -25,7 +25,7 @@ endif
 $(EXEC): $(OBJ)
 	g++ -o $@ $^ $(LDFLAGS)
 
-TestMain.o: main.cpp
+main.o: main.cpp
 	g++ -c $< $(CFLAGS)
 
 %.o: %.cpp %.h
