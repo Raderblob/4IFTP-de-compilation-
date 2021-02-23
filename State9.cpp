@@ -11,7 +11,7 @@
 #include "State9.h"
 
 void r4 () {
-    /*delete lexer->symbols.top();  
+    delete lexer->symbols.top();  
     lexer->symbols.pop();
 
     lexer->symbols.swap();
@@ -23,10 +23,11 @@ void r4 () {
     lexer->states.pop();
     lexer->states.pop();
 
-    lexer->states.top().nonTerm();*/
+    lexer->states.top().nonTerm();
 }
 
 void State9::plus(){
+//lexer->states.push(new State0(lexer));
     r4();    
 }
 
