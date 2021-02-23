@@ -8,9 +8,10 @@
 #include "State6.h"*/
 #include "State7.h"
 #include "State8.h"
+#include "State9.h"
 
 void r4 () {
-    delete lexer->symbols.top();  
+    /*delete lexer->symbols.top();  
     lexer->symbols.pop();
 
     lexer->symbols.swap();
@@ -22,7 +23,7 @@ void r4 () {
     lexer->states.pop();
     lexer->states.pop();
 
-    lexer->states.top().nonTerm();
+    lexer->states.top().nonTerm();*/
 }
 
 void State9::plus(){

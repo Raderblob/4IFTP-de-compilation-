@@ -18,4 +18,5 @@ class State0 : public State
         void closePar();
         void accept();
         void nonTerm();
+
 };
