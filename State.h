@@ -7,19 +7,21 @@ class State {
 
     public :
         State(Lexer * l) : lexer(l) {}
-        ~State() { };
+        virtual ~State();
 
-        void faireUnTruc();
+        virtual void faireUnTruc(Symbole * s);
+
 
     protected :
         Lexer * lexer;
 
-        void val() {}
-        void plus() {}
-        void mult() {}
-        void openPar() {}
-        void closePar() {}
-        void accept() {}
-        void nonTerm() {}
+        virtual void val() {}
+        virtual void plus() {}
+        virtual void mult() {}
+        virtual void openPar() {}
+        virtual void closePar() {}
+        virtual void accept() {}
+        virtual void nonTerm() {}
+        virtual void vide() {}
 
 };

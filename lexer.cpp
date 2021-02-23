@@ -46,7 +46,7 @@ Symbole * Lexer::Consulter() {
 }
 
 void Lexer::Avancer() {
-   states.top();
+   states.top()->faireUnTruc(tampon);
    tampon = nullptr;
 }
 

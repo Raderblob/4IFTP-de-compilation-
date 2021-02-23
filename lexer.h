@@ -15,8 +15,8 @@ class Lexer {
       Symbole * Consulter();
       void Avancer();
 
-      stack<Symbole> symbols;
-      stack<State> states;
+      stack<Symbole*> symbols;
+      stack<State*> states;
    protected:
       string flux;
       int tete;
