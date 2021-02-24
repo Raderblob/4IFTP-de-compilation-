@@ -3,6 +3,7 @@
 #include "lexer.h"
 #include "State3.h"
 #include "State6.h"
+#include "symbole.h"
 
 State* State2::openPar(){
      cout<< "state2 pushing state 2"<< endl;

@@ -7,12 +7,18 @@
 
 State* State9::plus() {
     if (lexer->states.size() < 4) {
+        error = true;
+        selfDeleteError = true;
         cout << "No numbers found ending calculation" << endl;
         lexer->states.pop();
 
-        while (lexer->states.size() > 1) {
+        while (lexer->states.size() > 0) {
             delete lexer->states.top();
             lexer->states.pop();
+        }
+        while (lexer->symbols.size() > 0) {
+            delete lexer->symbols.top();
+            lexer->symbols.pop();
         }
         return this;
     }

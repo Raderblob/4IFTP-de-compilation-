@@ -64,6 +64,23 @@ State* State::closePar() {
     return this;
 }
 State* State::accept() {
+    if (lexer->states.size() < 4) {
+        error = true;
+        selfDeleteError = true;
+        cout << "No numbers found ending calculation" << endl;
+        lexer->states.pop();
+
+        while (lexer->states.size() > 0) {
+            delete lexer->states.top();
+            lexer->states.pop();
+        }
+        while (lexer->symbols.size() > 0) {
+            delete lexer->symbols.top();
+            lexer->symbols.pop();
+        }
+        return this;
+    }
+
     error = true;
     selfDeleteError = false;
     cout << "Error missing ')', Calculating as if ')' present. Pushing to state 9  "<<endl;
