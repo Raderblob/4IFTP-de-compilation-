@@ -31,11 +31,6 @@ State* State2::closePar() {
     delete lexer->symbols.top();
     lexer->symbols.pop();
 
-    delete lexer->states.top();
-    lexer->states.pop();
-
-    delete lexer->symbols.top();
-    lexer->symbols.pop();
 
     return this;
 }
