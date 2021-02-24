@@ -39,3 +39,37 @@ State* State2::closePar() {
 
     return this;
 }
+State* State2::mult() {
+    error = true;
+    selfDeleteError = true;
+    cout << "Error missing value encountered '(*', removing last operator  " << endl;
+
+    lexer->states.pop();
+    delete lexer->symbols.top();
+    lexer->symbols.pop();
+
+    delete lexer->states.top();
+    lexer->states.pop();
+
+    delete lexer->symbols.top();
+    lexer->symbols.pop();
+
+    return this;
+}
+State* State2::plus() {
+    error = true;
+    selfDeleteError = true;
+    cout << "Error missing value encountered '(+', removing last operator  " << endl;
+
+    lexer->states.pop();
+    delete lexer->symbols.top();
+    lexer->symbols.pop();
+
+    delete lexer->states.top();
+    lexer->states.pop();
+
+    delete lexer->symbols.top();
+    lexer->symbols.pop();
+
+    return this;
+}

@@ -14,5 +14,7 @@ class State2 : public State
         State* val();
         State* openPar();
         State* closePar();
+        State* plus();
+        State* mult();
         
 };
