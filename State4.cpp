@@ -3,6 +3,7 @@
 #include "State3.h"
 #include "State2.h"
 #include "State7.h"
+#include "symbole.h"
 #include <iostream>
 
 State* State4::val() {

@@ -26,6 +26,10 @@ State* State1::accept(){
      cout << "Symbol length: " << lexer->symbols.size()<<endl;
      cout << "State length: " << lexer->states.size() << endl;
      cout << "result: " << lexer->symbols.top()->getValue()<<endl;
+
+     delete lexer->symbols.top();
+     delete lexer->states.top();
+     lexer->states.pop();
      return this;
 
 }

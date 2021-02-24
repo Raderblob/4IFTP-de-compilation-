@@ -3,7 +3,7 @@
 #include "symbole.h"
 
 int main(void) {
-   string chaine("(--a1+34)*(+-123");//with errors
+   string chaine("1+1");//with errors
 
    Lexer l(chaine);
 
