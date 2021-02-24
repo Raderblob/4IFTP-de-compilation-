@@ -3,8 +3,8 @@
 #include "symbole.h"
 
 int main(void) {
-   string chaine("1+1");//with errors
-
+   //string chaine("((--a1+34)*((()()()(-+-123");//with errors
+   string chaine("(");
    Lexer l(chaine);
 
    Symbole * s;
@@ -14,6 +14,7 @@ int main(void) {
       l.Avancer();
       cout<<"states: "<< l.states.size() << endl;
    }
+   delete l.Consulter();
    return 0;
 }
 

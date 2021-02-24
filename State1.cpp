@@ -28,6 +28,7 @@ State* State1::accept(){
      cout << "result: " << lexer->symbols.top()->getValue()<<endl;
 
      delete lexer->symbols.top();
+     lexer->symbols.pop();
      delete lexer->states.top();
      lexer->states.pop();
      return this;

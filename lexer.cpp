@@ -60,6 +60,7 @@ void Lexer::Avancer() {
    if (res != nullptr) {
        if (res->getError()) {
            cout << "An error has occured, extra character" << endl;
+           delete tampon;
            tampon = nullptr;
        }
        
