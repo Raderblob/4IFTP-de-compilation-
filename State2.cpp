@@ -20,3 +20,21 @@ void State2::nonTerm(){
      cout<< "state2 pushing state 6"<< endl;
     lexer->states.push(new State6(lexer));
 }
+
+State* State2::closePar() {
+    error = true;
+    selfDeleteError = true;
+    cout << "Error missing value encountered '()', removing last operator  " << endl;
+
+    lexer->states.pop();
+    delete lexer->symbols.top();
+    lexer->symbols.pop();
+
+    delete lexer->states.top();
+    lexer->states.pop();
+
+    delete lexer->symbols.top();
+    lexer->symbols.pop();
+
+    return this;
+}

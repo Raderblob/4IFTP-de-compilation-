@@ -6,6 +6,16 @@
 
 
 State* State9::plus() {
+    if (lexer->states.size() < 4) {
+        cout << "No numbers found ending calculation" << endl;
+        lexer->states.pop();
+
+        while (lexer->states.size() > 1) {
+            delete lexer->states.top();
+            lexer->states.pop();
+        }
+        return this;
+    }
     cout << "state9 reducing to ";
     lexer->states.pop();
     delete lexer->states.top();

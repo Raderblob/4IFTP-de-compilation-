@@ -4,7 +4,7 @@
 
 int main(void) {
    //string chaine("((--a1+34)*((()()()(-+-123");//with errors
-   string chaine("(");
+   string chaine(")(1*()+34)*(a+123");
    Lexer l(chaine);
 
    Symbole * s;

@@ -13,5 +13,6 @@ class State2 : public State
     protected:
         State* val();
         State* openPar();
+        State* closePar();
         
 };
