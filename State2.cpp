@@ -43,11 +43,6 @@ State* State2::mult() {
     delete lexer->symbols.top();
     lexer->symbols.pop();
 
-    delete lexer->states.top();
-    lexer->states.pop();
-
-    delete lexer->symbols.top();
-    lexer->symbols.pop();
 
     return this;
 }
@@ -60,11 +55,6 @@ State* State2::plus() {
     delete lexer->symbols.top();
     lexer->symbols.pop();
 
-    delete lexer->states.top();
-    lexer->states.pop();
-
-    delete lexer->symbols.top();
-    lexer->symbols.pop();
 
     return this;
 }
