@@ -11,16 +11,20 @@ class State {
 
         State* faireUnTruc(Symbole * s);
 
+        bool getError() { return error; }
+        bool getSelfDeleteError() { return selfDeleteError; }
         virtual void nonTerm(){}
     protected :
         Lexer * lexer;
+        bool error = false;
+        bool selfDeleteError = false;
 
-        virtual State* val() { return nullptr; }
-        virtual State* plus() { return nullptr; }
-        virtual State* mult() { return nullptr; }
-        virtual State* openPar() { return nullptr; }
-        virtual State* closePar() { return nullptr; }
-        virtual State* accept() { return nullptr; }
-        virtual State* vide() { return nullptr; }
+        virtual State* val();
+        virtual State* plus();
+        virtual State* mult();
+        virtual State* openPar();
+        virtual State* closePar();
+        virtual State* accept();
+        virtual State* vide();
 
 };

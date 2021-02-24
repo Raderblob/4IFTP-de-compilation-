@@ -6,7 +6,7 @@
 
 
 State* State8::plus() {
-    cout << "state8 reducing to" << endl;
+    cout << "state8 reducing to ";
     lexer->states.pop();
     delete lexer->states.top();
     lexer->states.pop();
@@ -23,6 +23,10 @@ State* State8::plus() {
 
     Symbole* result;
     result = new Entier(leftS->getValue() * rightS->getValue());
+
+    delete leftS;
+    delete rightS;
+
     lexer->symbols.push(result);
 
     result->Affiche();

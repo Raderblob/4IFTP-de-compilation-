@@ -1,6 +1,7 @@
 #include "lexer.h"
 #include "symbole.h"
 #include "State0.h"
+#include <iostream>
 Lexer::Lexer(string s){
    flux = s;
    tete = 0;
@@ -46,6 +47,7 @@ Symbole * Lexer::Consulter() {
                }
                else {
                   tampon = new Symbole(ERREUR);
+                  tete++;
                }
          }
       }
@@ -56,7 +58,16 @@ Symbole * Lexer::Consulter() {
 void Lexer::Avancer() {
    State* res = states.top()->faireUnTruc(tampon);
    if (res != nullptr) {
-       delete res;
+       if (res->getError()) {
+           cout << "An error has occured, extra character" << endl;
+           tampon = nullptr;
+       }
+       
+       if (res->getSelfDeleteError() == true || res->getError() == false) {
+           delete res;
+       }
+       
+       
    }
    else {
        tampon = nullptr;

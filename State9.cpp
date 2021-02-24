@@ -6,7 +6,7 @@
 
 
 State* State9::plus() {
-    cout << "state9 reducing to" << endl;
+    cout << "state9 reducing to ";
     lexer->states.pop();
     delete lexer->states.top();
     lexer->states.pop();

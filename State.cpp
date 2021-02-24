@@ -1,6 +1,7 @@
 #include "State.h"
 #include "lexer.h"
 #include "symbole.h"
+#include "State9.h"
 #include <iostream>
 
 State::State(Lexer * l){
@@ -30,8 +31,9 @@ State*  State::faireUnTruc(Symbole * s) {
             res = accept();
             break;
         default:
-            res = nullptr;
-            std::cout<<"err"<<std::endl;
+            error = true;
+            res = this;
+            std::cout<<"Error unknown character, skipping"<<std::endl;
             break;
     }
     if (res == nullptr) {
@@ -40,3 +42,40 @@ State*  State::faireUnTruc(Symbole * s) {
 
     return res;
 }
+
+State* State::val() {
+    error = true;
+    return this;
+}
+State* State::plus() {
+    error = true;
+    return this;
+}
+State* State::mult() {
+    error = true;
+    return this;
+}
+State* State::openPar() {
+    error = true;
+    return this;
+}
+State* State::closePar() {
+    error = true;
+    return this;
+}
+State* State::accept() {
+    error = true;
+    selfDeleteError = false;
+    cout << "Error missing ')', Calculating as if ')' present. Pushing to state 9  "<<endl;
+
+    lexer->symbols.push(new Symbole(CLOSEPAR));
+
+
+    lexer->states.push(new State9(lexer));
+    return this;
+}
+State* State::vide() {
+    error = true;
+    return this;
+}
+
