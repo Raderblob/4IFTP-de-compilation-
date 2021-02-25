@@ -30,4 +30,3 @@ int main(void) {
    delete l.Consulter();
    return 0;
 }
-
