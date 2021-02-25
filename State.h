@@ -13,6 +13,7 @@ class State {
 
         bool getError() { return error; }
         bool getSelfDeleteError() { return selfDeleteError; }
+        void resetError(){error=false;}
         virtual void nonTerm(){}
     protected :
         Lexer * lexer;

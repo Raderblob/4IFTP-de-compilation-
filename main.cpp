@@ -7,6 +7,7 @@ int main(void) {
    string chaine("(1+34)*123");
    //string chaine("((--a1+34)*(((-+-123");//with errors
    //string chaine(")(1()+34)*(a+123");//with errors
+   //string chaine("1(");//with errors
    //string chaine("8*(+)+1");//with errors
    //string chaine("8*");//with errors
   //string chaine("*)(");//with errors

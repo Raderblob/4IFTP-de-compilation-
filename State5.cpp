@@ -4,6 +4,7 @@
 #include "State2.h"
 #include "State8.h"
 #include <iostream>
+#include "symbole.h"
 
 State* State5::val(){
      cout << "state5 pushing state 3" << endl;

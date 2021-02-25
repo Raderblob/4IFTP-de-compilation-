@@ -62,11 +62,14 @@ void Lexer::Avancer() {
            cout << "An error has occured" << endl;
            delete tampon;
            tampon = nullptr;
+            res->resetError();
+           if(res->getSelfDeleteError()){
+              delete res;
+           }
+       }else{
+         delete res;
        }
        
-       if (res->getSelfDeleteError() == true || res->getError() == false) {
-           delete res;
-       }
        
        
    }
