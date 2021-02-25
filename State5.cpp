@@ -21,3 +21,15 @@ void State5::nonTerm(){
      cout << "state5 pushing state 8" << endl;
      lexer->states.push(new State8(lexer));
 }
+
+State* State5::accept() {
+    error = true;
+    selfDeleteError = true;
+    cout << "Error missing value, removing last operator  " << endl;
+
+    lexer->states.pop();
+    delete lexer->symbols.top();
+    lexer->symbols.pop();
+
+    return this;
+}

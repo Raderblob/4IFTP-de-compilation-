@@ -14,5 +14,6 @@ class State5 : public State
     protected:
         State* val();
         State* openPar();
-        
+
+        State* accept();
 };

@@ -44,27 +44,32 @@ State*  State::faireUnTruc(Symbole * s) {
 }
 
 State* State::val() {
+    cout << "extra character" << endl;
     error = true;
     return this;
 }
 State* State::plus() {
+    cout << "extra character" << endl;
     error = true;
     return this;
 }
 State* State::mult() {
+    cout << "extra character" << endl;
     error = true;
     return this;
 }
 State* State::openPar() {
+    cout << "extra character" << endl;
     error = true;
     return this;
 }
 State* State::closePar() {
+    cout << "extra character" << endl;
     error = true;
     return this;
 }
 State* State::accept() {
-    if (lexer->states.size() < 4) {
+    if (lexer->states.size() < 3) {
         error = true;
         selfDeleteError = true;
         cout << "No numbers found ending calculation" << endl;
