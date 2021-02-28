@@ -18,8 +18,10 @@ class Lexer {
 
       stack<Symbole*> symbols;
       stack<State*> states;
+      bool getError(){return hasErrors;}
    protected:
       string flux;
       int tete;
       Symbole * tampon;
+      bool hasErrors = false;
 };

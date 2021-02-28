@@ -10,7 +10,7 @@ int main(void) {
    //string chaine("1(");//with errors
    //string chaine("8*(+)+1");//with errors
    //string chaine("8*");//with errors
-  //string chaine("*)(");//with errors
+   //string chaine("*)(");//with errors
    Lexer l(chaine);
 
    Symbole * s;
@@ -20,6 +20,12 @@ int main(void) {
       l.Avancer();
       cout<<"states: "<< l.states.size() << endl;
    }
+   if(l.getError()){
+      cout<< "This result was calculated with errors, please review output"<<endl;
+   }
+
+
+
    while (l.states.size() > 0) {
       delete l.states.top();
       l.states.pop();

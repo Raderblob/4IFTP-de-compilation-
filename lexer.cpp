@@ -59,6 +59,7 @@ void Lexer::Avancer() {
    State* res = states.top()->faireUnTruc(tampon);
    if (res != nullptr) {
        if (res->getError()) {
+          hasErrors = true;
            cout << "An error has occured" << endl;
            delete tampon;
            tampon = nullptr;
